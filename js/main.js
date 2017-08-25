@@ -40,6 +40,9 @@ var userMessage = document.getElementById("userMessage");
 
 for (var i=0; i<myButtons.length; i++) {
 	
+	// TODO : look up passing events thru as parameters to non~anonymous functions
+	// myButtons[i].onclick = myAlert(e);
+	
 	myButtons[i].onclick = function(e) {
 		
 		e.preventDefault();
@@ -54,4 +57,10 @@ for (var i=0; i<myButtons.length; i++) {
 	}
 	
 	
+	
+}
+
+function myAlert(e) {
+	var e = e || window.event;
+	alert("the " + e.srcElement.localName + " " + e.srcElement.className + " was clicked!!!");
 }
