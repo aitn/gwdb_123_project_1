@@ -64,3 +64,29 @@ function myAlert(e) {
 	var e = e || window.event;
 	alert("the " + e.srcElement.localName + " " + e.srcElement.className + " was clicked!!!");
 }
+
+// fun with arrays!
+
+var myArray = [ 1, 2, 3, 4, 5, 6, 32, 213, 11, 0, 8.9 ];	
+	var sum = 0;
+	var highestValue = 0;
+	var lowestValue = 9999;
+	var myArrayCopy = new Array();
+	
+	for ( var i=0; i < myArray.length ; ++i ) {
+		
+		console.log(sum);
+		sum += myArray[i];	// calculate sum of all values in array
+		if ( highestValue < myArray[i] ) highestValue = myArray[i]; // find the highest value in an array
+		if ( lowestValue > myArray[i] ) lowestValue = myArray[i]; 	// find the lowest value in an array
+		
+		myArrayCopy[i] = myArray[i];		// copy an array super old skool style.
+	
+	}
+	
+	console.log("the final sum is : " + sum);
+	console.log("the average of the values in the array is : " + sum / myArray.length);
+	console.log("the highest value in the array is : " + highestValue);
+	console.log("here's myArrayCopy : ");
+	console.log(myArrayCopy);
+
